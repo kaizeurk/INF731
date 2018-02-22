@@ -1,0 +1,16 @@
+________________________________________________________________________________
+   Facture produite pour le fichier Facture-Creation.txt
+   par EMMANUEl FANGUE
+________________________________________________________________________________
+z-234 2 Pantalons noirs 39.99 FP 79.98 $
+a-123 1 Chemise blanche 59.99 FP 59.99 $
+b-417 4 Paires de chaussettes 5.97 FP 23.88 $
+p-006 2 Corn Flakes 900g 6.99 NT 13.98 $
+p-121 1 Sirop d'érable 355ml 5.99 NT 5.99 $
+d-556 1 Cartable 2" 3.99 FP 3.99 $
+--------------------------------------------------------------------------------
+Sous-Total : 187.81 $
+       TPS : 8.39 $
+       TVQ : 16.74 $
+     Total : 212.94 $
+

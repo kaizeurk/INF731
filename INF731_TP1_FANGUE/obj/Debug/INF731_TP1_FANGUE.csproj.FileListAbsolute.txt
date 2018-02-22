@@ -1,0 +1,6 @@
+/Users/emmanuelfangue/RiderProjects/INF731_TP1_FANGUE/INF731_TP1_FANGUE/bin/Debug/INF731_TP1_FANGUE.exe
+/Users/emmanuelfangue/RiderProjects/INF731_TP1_FANGUE/INF731_TP1_FANGUE/bin/Debug/INF731_TP1_FANGUE.pdb
+/Users/emmanuelfangue/RiderProjects/INF731_TP1_FANGUE/INF731_TP1_FANGUE/obj/Debug/INF731_TP1_FANGUE.csprojResolveAssemblyReference.cache
+/Users/emmanuelfangue/RiderProjects/INF731_TP1_FANGUE/INF731_TP1_FANGUE/obj/Debug/INF731_TP1_FANGUE.csproj.CoreCompileInputs.cache
+/Users/emmanuelfangue/RiderProjects/INF731_TP1_FANGUE/INF731_TP1_FANGUE/obj/Debug/INF731_TP1_FANGUE.exe
+/Users/emmanuelfangue/RiderProjects/INF731_TP1_FANGUE/INF731_TP1_FANGUE/obj/Debug/INF731_TP1_FANGUE.pdb
