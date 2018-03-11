@@ -6,15 +6,23 @@ namespace INF731_TP1_FANGUE
     public class Facture
     {
         /* Declaration des constantes */
-        public const double  TPS                 = 0.05;
-        public const double  TVQ                 = 0.09975;
-        public const string  NOM_RACINE          = "Facture-";
+        public  const double TPS                 = 0.05;
+        public  const double TVQ                 = 0.09975;
+        public  const string NOM_RACINE          = "Facture-";
         private const int    NONBRE_DE_PAS_LIGNE = 80;
         private const string AUTEURS             = "EMMANUEl FANGUE";
+        public  const string Erreur_fichier      = "erreur 404";
+        private const int colonne1 = 13;
+        private const int colonne2 = 2;
+        private const int colonne3 = 36;
+        private const int colonne4 = 7;
+        private const int colonne5 = 5;
+        private const int colonne6 = 7;
+        private const int ligne_total = 72;
         
         /* Declaration des attributs */
         private List<Article> articles;
-        private string        nom_facture;
+        private string nom_facture;
         private double montant_tps;
         private double montant_tvq;
         private double sous_total;
@@ -87,12 +95,15 @@ namespace INF731_TP1_FANGUE
         private string ligneFacture(Article in_article)
         {
             string ligne_facture = "";
-            ligne_facture += in_article.NumeroArticle + " ";
-            ligne_facture += in_article.Quantite + " ";
-            ligne_facture += in_article.Description + " ";
-            ligne_facture += formatMonnai(in_article.PrixUniaite) + " ";
-            ligne_facture += in_article.TaxeCategorie + " ";
-            ligne_facture += formatMonnai(in_article.PrixUniaite*in_article.Quantite) + " $\n";
+            ligne_facture += in_article.NumeroArticle.PadRight(colonne1, ' ');
+            ligne_facture += (in_article.Quantite + "").PadRight(colonne2, ' ');
+            ligne_facture += in_article.Description.PadRight(colonne3, ' ');
+            ligne_facture += (formatMonnai(in_article.PrixUniaite) + " ").PadLeft(colonne4, ' ');
+            ligne_facture += ((in_article.TaxeCategorie == Article.TAXABLE)?in_article.TaxeCategorie + " ":" ").PadRight(colonne5, ' ');
+            ligne_facture += (formatMonnai(in_article.PrixUniaite*in_article.Quantite)+" $").PadLeft(colonne6, ' '); ;
+            ligne_facture = ligne_facture.PadLeft(ligne_total, ' ');
+
+            ligne_facture += "\n";
 
             return ligne_facture;
         }
@@ -111,10 +122,10 @@ namespace INF731_TP1_FANGUE
         private string getBlockSousTotal()
         {
             double sous_total = sousTotal(); 
-            return "Sous-Total : " + formatMonnai(sous_total) + " $\n" +
-                   "       TPS : " + formatMonnai(montant_tps) + " $\n" +
-                   "       TVQ : " + formatMonnai(montant_tvq) + " $\n" +
-                   "     Total : " + formatMonnai(montant_tps + montant_tvq  + sous_total) + " $\n";
+            return ("Sous-Total : " + (formatMonnai(sous_total) + " $").PadLeft(11,' ')).PadLeft(ligne_total,' ') + "\n"+
+                   ("       TPS : " + (formatMonnai(montant_tps) + " $").PadLeft(11,' ')).PadLeft(ligne_total,' ') + "\n" +
+                   ("       TVQ : " + (formatMonnai(montant_tvq) + " $").PadLeft(11,' ')).PadLeft(ligne_total,' ') + "\n" +
+                   ("     Total : " + (formatMonnai(montant_tps + montant_tvq  + sous_total) + " $").PadLeft(11,' ')).PadLeft(ligne_total,' ') + "\n";
         }
         
         public string ToString()

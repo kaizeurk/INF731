@@ -8,7 +8,7 @@ namespace INF731_TP1_FANGUE
         public const string NON_TAXABLE = "NT";
         public const string TAXABLE     = "FP";
 
-        enum type_taxe
+        public enum type_taxe
         {
             NON_TAXABLE,
             TAXABLE
@@ -60,7 +60,7 @@ namespace INF731_TP1_FANGUE
             get => taxe_categorie;
             set
             {
-                Enum.IsDefined(typeof(type_taxe),value);
+                Enum.IsDefined(typeof(type_taxe),value.ToUpper());
                 if (TAXABLE == value.ToUpper() || NON_TAXABLE == value.ToUpper())
                 {
                     taxe_categorie = value.ToUpper();
