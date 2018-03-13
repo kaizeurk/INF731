@@ -3,7 +3,15 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;   // pour utiliser les fichiers
 
-namespace INF731_TP1_FANGUE
+
+/**
+ * Auteurs: Fangue Emmanuel et Fossuo Talom Hermann
+ * Nom du fichier: FichierFacture.cs
+ * Nom projet: INF731_TP1_FANGUE
+ * Date de creation: 2018-03-13
+ * Description: permet de gerer les entrees/sortie avec les fuchiers
+ */
+namespace INF731_TP1
 {
     static public class FichierFacture
     {
@@ -77,6 +85,7 @@ namespace INF731_TP1_FANGUE
                     {
                         throw new Exception(String.Format("Erreur dans le fichier {0} la colonne 4 est vide a la linge {1}",nom_facture_sortant,ligne));
                     }
+                    
                     else if (int.TryParse(element[2], out qte)==false)
                     {
                         throw new Exception(String.Format("Erreur dans le fichier {0} la colonne 3 doit-etre un entier {1}",nom_facture_sortant,ligne));
@@ -96,7 +105,6 @@ namespace INF731_TP1_FANGUE
                     }
                    
                 }
-
                 
                 flux_sortant.Close();
             }

@@ -1,6 +1,14 @@
 ﻿using System;
 
-namespace INF731_TP1_FANGUE
+
+/**
+ * Auteurs: Fangue Emmanuel et Fossuo Talom Hermann
+ * Nom du fichier: Article.cs
+ * Nom projet: INF731_TP1
+ * Date de creation: 2018-03-13
+ * Description: class article
+ */
+namespace INF731_TP1
 {
     public class Article
     {
@@ -97,7 +105,7 @@ namespace INF731_TP1_FANGUE
             return (TaxeCategorie == NON_TAXABLE);
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return NumeroArticle+";"+TaxeCategorie+";"+Quantite+";"+Description+";"+PrixUniaite;
         }

@@ -1,7 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace INF731_TP1_FANGUE
+
+/**
+ * Auteurs: Fangue Emmanuel et Fossuo Talom Hermann
+ * Nom du fichier: Facture.cs
+ * Nom projet: INF731_TP1_FANGUE
+ * Date de creation: 2018-03-13
+ * Description: 
+ */
+namespace INF731_TP1
 {
     public class Facture
     {
@@ -128,7 +136,7 @@ namespace INF731_TP1_FANGUE
                    ("     Total : " + (formatMonnai(montant_tps + montant_tvq  + sous_total) + " $").PadLeft(11,' ')).PadLeft(ligne_total,' ') + "\n";
         }
         
-        public string ToString()
+        public override string ToString()
         {
             string chaineDeSortie = entete();
            
